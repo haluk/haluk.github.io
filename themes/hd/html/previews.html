@@ -1,0 +1,38 @@
+{% extends "/html/base.html" %}
+{% block content %}
+<section>
+    <h2><a id="contact" href="#contact" aria-hidden="true"></a>Contact</h2>
+    <ul>
+        <li>Email: {{emailaddr|email}}</li>
+        <li>PGP Key: <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/1CC57A4274770F0CC6F4F120C24BFF026F3B56D4">{{pgp}}</a></li>
+        <li>Programmer Zone: <a href={{github}} target="_blank">Github</a>, <a href={{stackoverflow}} target="_blank">Stack Overflow</a></li>
+        <li>Social Media: <a href={{linkedin}} target="_blank">LinkedIn</a> <a href={{twitter}} target="_blank">Twitter</a></<li>
+    </ul>
+</section>
+<div id="post">
+    {% for post in posts %}
+    <div class="post-header">
+        <h2>{{post.title}}</h2>
+        <div id="post-meta">
+            {{post.date|date:longDate}}
+            {% if post.author %}
+            | By {{post.author}}
+            {% endif %}
+            </div>
+        </div>
+    </div>
+    {{post.content|safe}}
+    <a href="{{post.uri}}">Continue reading &#8594;</a>
+    <hr>
+    {% endfor %}
+
+    <div id="prev-next">
+        {% if prev-uri %}
+        <a class="left" href="{{prev-uri}}">&laquo; Prev</a>
+        {% endif %}
+        {% if next-uri %}
+        <a class="right" href="{{next-uri}}">Next &raquo;</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

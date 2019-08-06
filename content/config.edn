@@ -1,0 +1,42 @@
+{:site-title           "Haluk Dogan"
+ :header               "haluk-dogan"
+ :subject              "Posts About Functional Programming, Machine Learning, and Linux"
+ :author               "Haluk Dogan"
+ :description          "Personal Website"
+ :site-url             "https://haluk.github.io/"
+ :emailaddr            "hdogan@vivaldi.net"
+ :pgp                  "1CC5 7A42 7477 0F0C C6F4 F120 C24B FF02 6F3B 56D4"
+ :github               "https://github.com/haluk"
+ :stackoverflow        "https://stackoverflow.com/users/204580/haluk"
+ :linkedin             "https://www.linkedin.com/in/halukdogan/"
+ :twitter              "https://twitter.com/halukdogan"
+ :post-root            "posts"
+ :page-root            "pages"
+ :post-root-uri        "posts-output"
+ :page-root-uri        "pages-output"
+ :tag-root-uri         "tags-output"
+ :author-root-uri      "authors-output"
+ :public-dest          "public"
+ :blog-prefix          ""
+ :rss-name             "feed.xml"
+ :rss-filters          ["cryogen"]
+ :recent-posts         3
+ :post-date-format     "yyyy-MM-dd"
+ :archive-group-format "yyyy MMMM"
+ :sass-src             []
+ :sass-path            "sass"
+ :compass-path         "compass"
+ :theme                "hd"
+ :resources            ["img"]
+ :keep-files           [".git"]
+ :disqus?              false
+ :disqus-shortname     ""
+ :ignored-files        [#"\.#.*" #".*\.swp$"]
+ :previews?            true
+ :posts-per-page       5
+ :blocks-per-preview   2
+ :clean-urls           :trailing-slash
+ :collapse-subdirs?    false
+ :hide-future-posts?   true
+ :klipse               {}
+ :debug?               false}
