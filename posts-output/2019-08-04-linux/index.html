@@ -12,7 +12,7 @@
         </script>
 
         <meta charset="utf-8"/>
-        <title>Haluk Dogan: highlight.js Test</title>
+        <title>Haluk Dogan: Bash Functions</title>
         <link rel="canonical" href="https://haluk.github.io/posts-output/2019-08-04-linux/">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/fantasque-sans-mono" type="text/css"/>
@@ -53,9 +53,9 @@
                             <h3>Recent Posts</h3>
                             <ul>
                                 
-                                <li><a href="/posts-output/2019-08-04-mathjax/">MathJax Test</a></li>
+                                <li><a href="/posts-output/2019-08-04-linux/">Bash Functions</a></li>
                                 
-                                <li><a href="/posts-output/2019-08-04-linux/">highlight.js...</a></li>
+                                <li><a href="/posts-output/2019-08-04-mathjax/">MathJax Test</a></li>
                                 
                             </ul>
                         </div>
@@ -65,11 +65,13 @@
                             <h3>Tags</h3>
                             <ul>
                                 
+                                <li><a href="/tags-output/bash/">bash</a></li>
+                                
+                                <li><a href="/tags-output/linux/">linux</a></li>
+                                
                                 <li><a href="/tags-output/latex/">latex</a></li>
                                 
                                 <li><a href="/tags-output/math/">math</a></li>
-                                
-                                <li><a href="/tags-output/linux/">linux</a></li>
                                 
                             </ul>
                         </div>
@@ -79,10 +81,10 @@
             
 <div id="post">
     <div class="post-header">
-    <h2>highlight.js Test</h2>
+    <h2>Bash Functions</h2>
     <div id="post-meta" class="row">
         <div class="col-lg-6">
-            August 4, 2019
+            September 30, 2019
             
             <span class="col-lg-6 right"> | By Haluk Dogan</span>
             
@@ -92,8 +94,31 @@
 <br/>
 <div>
     
-    <p> This is a test post to check whether the code snippet is highlighted with <code>highlight.js</code> or not.  </p><pre><code class="bash"> function list&#95;cols {
-    awk -F, '{for &#40;i = 1; i &lt;= NF; i++&#41; print i&quot;:&quot;, $i; exit}' $1
+    <p>I heavily use two <i>bash</i> functions I defined. <i>listcols</i> is for listing columns along with its column index, and <i>prettycsv</i> is for displaying delimited files nicely formatted in the terminal.  </p><pre><code class="bash"> function listcols {
+    local arg sep
+    sep=&quot;,&quot;
+    while getopts 's:' arg
+    do
+        case ${arg} in
+            s&#41; sep=${OPTARG};;
+            &#42;&#41; return 1 # illegal option
+        esac
+    done
+    shift $&#40;&#40;OPTIND -1&#41;&#41;
+    awk -F$sep '{for &#40;i = 1; i &lt;= NF; i++&#41; print i&quot;:&quot;, $i; exit}' $@
+}
+ </code></pre> <pre><code class="bash"> function prettycsv {
+    local arg sep
+    sep=&quot;,&quot;
+    while getopts 's:' arg
+    do
+        case ${arg} in
+            s&#41; sep=${OPTARG};;
+            &#42;&#41; return 1 # illegal option
+        esac
+    done
+    shift $&#40;&#40;OPTIND -1&#41;&#41;
+    column -t -s$sep -n &quot;$@&quot; | less -N -F -S -X -K
 }
  </code></pre>
 </div>
@@ -101,6 +126,8 @@
 
 <div id="post-tags">
     <b>Tags: </b>
+    
+    <a href="/tags-output/bash/">bash</a>
     
     <a href="/tags-output/linux/">linux</a>
     
@@ -110,8 +137,8 @@
     <br/>
     <div id="prev-next">
         
-        <a href="/posts-output/2019-08-04-mathjax/">&laquo; MathJax Test</a>
         
+        <a class="right" href="/posts-output/2019-08-04-mathjax/">MathJax Test &raquo;</a>
         
     </div>
 

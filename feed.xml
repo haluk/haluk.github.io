@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="https://haluk.github.io/" rel="self" type="application/rss+xml"/><title>Haluk Dogan</title><link>https://haluk.github.io/</link><description>Personal Website</description><lastBuildDate>Mon, 30 Sep 2019 17:23:38 +0000</lastBuildDate><generator>clj-rss</generator><item><guid>https://haluk.github.io/posts-output/2019-08-04-mathjax/</guid><link>https://haluk.github.io/posts-output/2019-08-04-mathjax/</link><title>MathJax Test</title><description> &lt;p&gt; This is a test post to check whether &lt;code&gt;MathJax&lt;/code&gt; rendering works or not.  &lt;/p&gt;&lt;p&gt; $$ \Large{\lambda f.(\lambda x.f (x\text{ }x)) (\lambda x.f (x\text{ }x))} $$  $$ \Large{P(A \vert B)=\frac { P(B \vert A)P(A) }{ P(B) }} $$&lt;/p&gt;</description><author>Haluk Dogan</author><pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate></item><item><guid>https://haluk.github.io/posts-output/2019-08-04-linux/</guid><link>https://haluk.github.io/posts-output/2019-08-04-linux/</link><title>highlight.js Test</title><description>&lt;p&gt; This is a test post to check whether the code snippet is highlighted with &lt;code&gt;highlight.js&lt;/code&gt; or not.  &lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt; function list&amp;#95;cols {
-    awk -F, '{for &amp;#40;i = 1; i &amp;lt;= NF; i++&amp;#41; print i&amp;quot;:&amp;quot;, $i; exit}' $1
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="https://haluk.github.io/" rel="self" type="application/rss+xml"/><title>Haluk Dogan</title><link>https://haluk.github.io/</link><description>Personal Website</description><lastBuildDate>Mon, 30 Sep 2019 18:06:50 +0000</lastBuildDate><generator>clj-rss</generator><item><guid>https://haluk.github.io/posts-output/2019-08-04-linux/</guid><link>https://haluk.github.io/posts-output/2019-08-04-linux/</link><title>Bash Functions</title><description>&lt;p&gt;I heavily use two &lt;i&gt;bash&lt;/i&gt; functions I defined. &lt;i&gt;listcols&lt;/i&gt; is for listing columns along with its column index, and &lt;i&gt;prettycsv&lt;/i&gt; is for displaying delimited files nicely formatted in the terminal.  &lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt; function listcols {
+    local arg sep
+    sep=&amp;quot;,&amp;quot;
+    while getopts 's:' arg
+    do
+        case ${arg} in
+            s&amp;#41; sep=${OPTARG};;
+            &amp;#42;&amp;#41; return 1 # illegal option
+        esac
+    done
+    shift $&amp;#40;&amp;#40;OPTIND -1&amp;#41;&amp;#41;
+    awk -F$sep '{for &amp;#40;i = 1; i &amp;lt;= NF; i++&amp;#41; print i&amp;quot;:&amp;quot;, $i; exit}' $@
 }
- &lt;/code&gt;&lt;/pre&gt;</description><author>Haluk Dogan</author><pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate></item></channel></rss>
+ &lt;/code&gt;&lt;/pre&gt; &lt;pre&gt;&lt;code class="bash"&gt; function prettycsv {
+    local arg sep
+    sep=&amp;quot;,&amp;quot;
+    while getopts 's:' arg
+    do
+        case ${arg} in
+            s&amp;#41; sep=${OPTARG};;
+            &amp;#42;&amp;#41; return 1 # illegal option
+        esac
+    done
+    shift $&amp;#40;&amp;#40;OPTIND -1&amp;#41;&amp;#41;
+    column -t -s$sep -n &amp;quot;$@&amp;quot; | less -N -F -S -X -K
+}
+ &lt;/code&gt;&lt;/pre&gt;</description><author>Haluk Dogan</author><pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate></item><item><guid>https://haluk.github.io/posts-output/2019-08-04-mathjax/</guid><link>https://haluk.github.io/posts-output/2019-08-04-mathjax/</link><title>MathJax Test</title><description> &lt;p&gt; This is a test post to check whether &lt;code&gt;MathJax&lt;/code&gt; rendering works or not.  &lt;/p&gt;&lt;p&gt; $$ \Large{\lambda f.(\lambda x.f (x\text{ }x)) (\lambda x.f (x\text{ }x))} $$  $$ \Large{P(A \vert B)=\frac { P(B \vert A)P(A) }{ P(B) }} $$&lt;/p&gt;</description><author>Haluk Dogan</author><pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate></item></channel></rss>

@@ -12,8 +12,8 @@
         </script>
 
         <meta charset="utf-8"/>
-        <title>Haluk Dogan</title>
-        <link rel="canonical" href="https://haluk.github.io">
+        <title>Haluk Dogan: Posts Tagged &quot;bash&quot;</title>
+        <link rel="canonical" href="https://haluk.github.io/tags-output/bash/">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/fantasque-sans-mono" type="text/css"/>
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/gruvbox-dark.min.css">
@@ -28,7 +28,7 @@
             <h5 class="comment">"Posts About Functional Programming, Machine Learning, and Linux"</h5>
             <p>
                 [
-                <a  class="active"  href="/">Home</a>
+                <a  href="/">Home</a>
                 
                 <a  href="/pages-output/about/">About</a>
                 
@@ -79,64 +79,17 @@
                 </aside>
             </dd>
             
-<section>
-    <h2><a id="contact" href="#contact" aria-hidden="true"></a>Contact</h2>
+<div id="posts-by-tag">
+    <div id="page-header">
+        <h2>Posts Tagged &quot;bash&quot;</h2>
+    </div>
     <ul>
-        <li>Email: <a href='mailto:hdogan@vivaldi.net'>hdogan@vivaldi.net</a></li>
-        <li>Resume: <a href="/misc/hdogan_resume.pdf" target="_blank">hdogan_resume.pdf</a></li>
-        <li>PGP Key: <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/1CC57A4274770F0CC6F4F120C24BFF026F3B56D4">1CC5 7A42 7477 0F0C C6F4 F120 C24B FF02 6F3B 56D4</a></li>
-        <li>Programmer Zone: <a href=https://github.com/haluk target="_blank">Github</a>, <a href=https://stackoverflow.com/users/204580/haluk target="_blank">Stack Overflow</a></li>
-        <li>Social Media: <a href=https://www.linkedin.com/in/halukdogan/ target="_blank">LinkedIn</a> <a href=https://twitter.com/halukdogan target="_blank">Twitter</a></<li>
+    
+        <li>
+            <a href="/posts-output/2019-08-04-linux/">Bash Functions</a>
+        </li>
+    
     </ul>
-</section>
-<div id="post">
-    
-    <div class="post-header">
-        <h2>Bash Functions</h2>
-        <div id="post-meta">
-            September 30, 2019
-            
-            | By Haluk Dogan
-            
-            </div>
-        </div>
-    </div>
-    <p>I heavily use two <i>bash</i> functions I defined. <i>listcols</i> is for listing columns along with its column index, and <i>prettycsv</i> is for displaying delimited files nicely formatted in the terminal.  </p><pre><code class="bash"> function listcols {
-    local arg sep
-    sep=","
-    while getopts 's:' arg
-    do
-        case ${arg} in
-            s) sep=${OPTARG};;
-            *) return 1 # illegal option
-        esac
-    done
-    shift $((OPTIND -1))
-    awk -F$sep '{for (i = 1; i &lt;= NF; i++) print i":", $i; exit}' $@
-}
- </code></pre>
-    <a href="/posts-output/2019-08-04-linux/">Continue reading &#8594;</a>
-    <hr>
-    
-    <div class="post-header">
-        <h2>MathJax Test</h2>
-        <div id="post-meta">
-            August 4, 2019
-            
-            | By Haluk Dogan
-            
-            </div>
-        </div>
-    </div>
-     <p> This is a test post to check whether <code>MathJax</code> rendering works or not.  </p>
-    <a href="/posts-output/2019-08-04-mathjax/">Continue reading &#8594;</a>
-    <hr>
-    
-
-    <div id="prev-next">
-        
-        
-    </div>
 </div>
 
             <header class="myHeader">
