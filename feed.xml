@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="https://haluk.github.io/" rel="self" type="application/rss+xml"/><title>Haluk Dogan</title><link>https://haluk.github.io/</link><description>Personal Website</description><lastBuildDate>Sat, 07 Mar 2020 20:26:41 +0000</lastBuildDate><generator>clj-rss</generator><item><guid>https://haluk.github.io/posts-output/2020-03-97-linux/</guid><link>https://haluk.github.io/posts-output/2020-03-97-linux/</link><title>Moving files to subdirectories</title><description>&lt;p&gt;If you have a directory with lots of files in it, this &lt;i&gt;POSIX-compliant Bash&lt;/i&gt; script is here to help  you to move its files into subdirectories. &lt;pre&gt;&lt;code class="bash"&gt;#!/usr/bin/env bash
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="https://haluk.github.io/" rel="self" type="application/rss+xml"/><title>Haluk Dogan</title><link>https://haluk.github.io/</link><description>Personal Website</description><lastBuildDate>Sat, 07 Mar 2020 20:33:11 +0000</lastBuildDate><generator>clj-rss</generator><item><guid>https://haluk.github.io/posts-output/2020-03-97-linux/</guid><link>https://haluk.github.io/posts-output/2020-03-97-linux/</link><title>Moving files to subdirectories</title><description>&lt;p&gt;If you have a directory with lots of files in it, this &lt;i&gt;POSIX compliant Bash&lt;/i&gt; script is here to help  you to move its files into subdirectories. &lt;pre&gt;&lt;code class="bash"&gt;#!/usr/bin/env bash
 
 echo &amp;quot;$&amp;#40;find . -type f | wc -l&amp;#41;&amp;quot; files
 
-printf &amp;quot;How Many Directories: &amp;quot;
+printf &amp;quot;How many subdirectories: &amp;quot;
 read -r F
-printf &amp;quot;Sub-Directories Prefix: &amp;quot;
+printf &amp;quot;Subdirectories prefix: &amp;quot;
 read -r S
 
-PARRENT=${PWD}
+PARENT=${PWD}
 n=0
 for i in &amp;#42;
 do
   if &amp;#91; $&amp;#40;&amp;#40;n+=1&amp;#41;&amp;#41; -gt &amp;quot;$F&amp;quot; &amp;#93;; then
     n=1
   fi
-  todir=$PARRENT/&amp;quot;$S&amp;quot;&amp;#95;$n
+  todir=$PARENT/&amp;quot;$S&amp;quot;&amp;#95;$n
   &amp;#91; -d &amp;quot;$todir&amp;quot; &amp;#93; || mkdir &amp;quot;$todir&amp;quot; 
   mv &amp;quot;$i&amp;quot; &amp;quot;$todir&amp;quot; 
 done
- &lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;</description><author>Haluk Dogan</author><pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate></item><item><guid>https://haluk.github.io/posts-output/2019-08-04-linux/</guid><link>https://haluk.github.io/posts-output/2019-08-04-linux/</link><title>Bash Functions</title><description>&lt;p&gt;I heavily use two &lt;i&gt;bash&lt;/i&gt; functions I defined. &lt;i&gt;listcols&lt;/i&gt; is for listing columns along with its column index, and &lt;i&gt;prettycsv&lt;/i&gt; is for displaying delimited files nicely formatted in the terminal.  &lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt; function listcols {
+&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;</description><author>Haluk Dogan</author><pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate></item><item><guid>https://haluk.github.io/posts-output/2019-08-04-linux/</guid><link>https://haluk.github.io/posts-output/2019-08-04-linux/</link><title>Bash Functions</title><description>&lt;p&gt;I heavily use two &lt;i&gt;bash&lt;/i&gt; functions I defined. &lt;i&gt;listcols&lt;/i&gt; is for listing columns along with its column index, and &lt;i&gt;prettycsv&lt;/i&gt; is for displaying delimited files nicely formatted in the terminal.  &lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt; function listcols {
     local arg sep
     sep=&amp;quot;,&amp;quot;
     while getopts 's:' arg

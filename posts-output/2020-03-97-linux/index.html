@@ -96,27 +96,27 @@
 <br/>
 <div>
     
-    <p>If you have a directory with lots of files in it, this <i>POSIX-compliant Bash</i> script is here to help  you to move its files into subdirectories. <pre><code class="bash">#!/usr/bin/env bash
+    <p>If you have a directory with lots of files in it, this <i>POSIX compliant Bash</i> script is here to help  you to move its files into subdirectories. <pre><code class="bash">#!/usr/bin/env bash
 
 echo &quot;$&#40;find . -type f | wc -l&#41;&quot; files
 
-printf &quot;How Many Directories: &quot;
+printf &quot;How many subdirectories: &quot;
 read -r F
-printf &quot;Sub-Directories Prefix: &quot;
+printf &quot;Subdirectories prefix: &quot;
 read -r S
 
-PARRENT=${PWD}
+PARENT=${PWD}
 n=0
 for i in &#42;
 do
   if &#91; $&#40;&#40;n+=1&#41;&#41; -gt &quot;$F&quot; &#93;; then
     n=1
   fi
-  todir=$PARRENT/&quot;$S&quot;&#95;$n
+  todir=$PARENT/&quot;$S&quot;&#95;$n
   &#91; -d &quot;$todir&quot; &#93; || mkdir &quot;$todir&quot; 
   mv &quot;$i&quot; &quot;$todir&quot; 
 done
- </code></pre></p>
+</code></pre></p>
 </div>
 <br/>
 
