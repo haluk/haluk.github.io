@@ -1,0 +1,200 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{microtype}
+%\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+%\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-1in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{-}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\hypersetup{
+  pdftitle=CV/Resume \textbar{} Haluk Dogan,
+  pdfauthor=Haluk Dogan,
+  pdfsubject=CV/Resume%
+}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\newcommand{\updateinfo}[1][\today]{\par\vfill\hfill{\scriptsize Last updated on #1\\}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% ----------HEADING-----------------
+\updateinfo
+\vspace{0.5cm}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	\textbf{\Huge Haluk Dogan} & Email : \href{mailto:hdogan@vivaldi.net}{hdogan@vivaldi.net}\\
+	\href{https://haluk.github.io/}{https://haluk.github.io/} & Mobile : +1 (531) 218-8301\\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{University of Nebraska-Lincoln}{Lincoln, NE}
+{Doctor of Philosophy in Computer Science (PhD Candidate)}{August 2018--May 2021}
+\resumeSubheading
+{Bogazici University}{Istanbul, Turkey}
+{Master of Science in Computer Engineering}{September 2011--June 2013}
+\resumeSubheading
+{Istanbul Bilgi University}{Istanbul, Turkey}
+{Bachelor of Science in Computer Science}{September 2006--June 2010}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading{University of Nebraska-Lincoln}{Lincoln, NE} {Machine Learning Scientist}{Aug 2018--Present}
+\resumeItemListStart
+\resumeItem{Teaching} {I was the head TA of \textbf{``Python Programming for Data
+    Science''} courses offered to undergraduate and graduate students. I led
+  recitations, lab sessions, and graded weekly assignments.}
+\resumeItem{Research} {I work on machine learning with focus on graphical models
+  and Bayesian statistics. I have 9 journal, conference, book chapter, and
+  preprint publications. I develop my programs for my research in
+  \textbf{Python, R}, and \textbf{Java}. I use various third-party programming
+  libraries including but not limited to \textbf{TensorFlow} and
+  \textbf{Scikit-learn}. I use \textbf{Git} and \textbf{Docker} to share my
+  programs and environment for reproducibility. I use UNL's supercomputers and
+  \textbf{GCP}.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Roomkita}{Istanbul, Turkey}
+{Co-founder}{Aug 2013--Aug 2019}
+\resumeItemListStart
+\resumeItem{Developer}
+{I helped to develop the website in \textbf{Django}. I also implemented a \textbf{machine learning} module to amend search results. The company is featured in \textbf{tnooz}, a global provider of news related to travel technology.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Istanbul Bilgi University}{Istanbul, Turkey}
+{Research Scientist}{Nov 2010--Aug 2013}
+\resumeItemListStart
+\resumeItem{Teaching}
+{I was the head TA of programming, taught in \textbf{Scheme}, probability and statistics courses. I led lab sessions and graded quizzes, assignments and exams.}
+\resumeItem{Software Developer}
+{I helped to build the engineering faculty website. Website was in \textbf{Wordpress} but I made customizations in \textbf{PHP} to the CMS and the theme according to our needs.}
+\resumeItemListEnd
+
+\resumeSubheading
+{i2i Systems}{Istanbul, Turkey}
+{Software Developer}{Mar 2010--June 2010}
+\vspace{0.1cm}
+\resumeItemListStart
+{I developed a command-line \textbf{Java} program for PL/SQL developers in the company. Business analysts were preparing the billing rules in spreadsheets. Spreadsheets were unstructured and contained references. Therefore they were not suitable for parsing them as a delimited file. I built the grammar of billing rules using \textbf{JavaCC} and developed its parser. I used \textbf{Spring Framework} and \textbf{Hibernate} to insert rule formulas as a text into the respected database tables. I used \textbf{Maven} to create a jar file of my program. I also create a \textbf{cron} job to run my program in a regular basis.}
+\resumeItemListEnd
+
+\resumeSubheading
+{GNA}{Istanbul, Turkey}
+{Data Scientist}{Aug 2009--Mar 2010}
+\vspace{0.1cm}
+\resumeItemListStart
+{My responsibilities were data staging, data cleaning, and prepare weekly reports. I used \textbf{SQL, Oracle SQL Developer} in my daily routine tasks.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Aradiom}{Istanbul, Turkey}
+{Software Developer}{Mar 2008--Jun 2008}
+\vspace{0.1cm}
+\resumeItemListStart
+{I designed and implemented backend/frontend regex editor to create cron jobs. This was designed for non-technical users. I used \textbf{JBoss Seam Framework}.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{Side Projects}
+{Implemented and designed a distributed application that sends SMS messages by connecting to SMSC via SMPP by using \textbf{Apache Thrift RPC Framework}}
+\vspace{0.1cm}
+\resumeSubItem{Course Projects}
+{Machine learning algorithms, IO-efficient algorithms, string matching algorithms, data compression algorithms}
+\resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+\resumeSubHeadingListStart
+\item{
+            \textbf{Languages}{: Java, Python, R, Clojure, Lisp, Scheme, SQL}
+      }
+\item{
+            \textbf{Technologies}{: Git, Docker, Maven, Leiningen, Make, Linux, AWK, sed, Emacs}
+      }
+\resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
