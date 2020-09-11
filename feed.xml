@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="https://haluk.github.io/" rel="self" type="application/rss+xml"/><title>Haluk Dogan</title><link>https://haluk.github.io/</link><description>Personal Website</description><lastBuildDate>Mon, 07 Sep 2020 20:12:10 +0000</lastBuildDate><generator>clj-rss</generator><item><guid>https://haluk.github.io/posts-output/2020-03-07-linux/</guid><link>https://haluk.github.io/posts-output/2020-03-07-linux/</link><title>DWM Config</title><description>&lt;p&gt;If you encounter misbehaving Java applications, add the following to your &lt;code&gt;$HOME/.xinitrc&lt;/code&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt;export &amp;#95;JAVA&amp;#95;AWT&amp;#95;WM&amp;#95;NONREPARENTING=1
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="https://haluk.github.io/" rel="self" type="application/rss+xml"/><title>Haluk Dogan</title><link>https://haluk.github.io/</link><description>Personal Website</description><lastBuildDate>Fri, 11 Sep 2020 20:24:47 +0000</lastBuildDate><generator>clj-rss</generator><item><guid>https://haluk.github.io/posts-output/2020-09-11-emacs/</guid><link>https://haluk.github.io/posts-output/2020-09-11-emacs/</link><title>isync + notmuch + emacs</title><description>&lt;p&gt;This is my setup for emacs as email client. First, we need to install the required programs for password management (&lt;em&gt;pass&lt;/em&gt;), mailbox synchronizer (&lt;em&gt;isync&lt;/em&gt;), smtp client (&lt;em&gt;msmtp&lt;/em&gt;), and mail indexer and tagger (&lt;em&gt;notmuch, afew&lt;/em&gt;).&lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt;sudo pacman -S pass isync msmtp notmuch afew
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;My configuration for mailbox synchronizer (&lt;em&gt;$HOME/.mbsyncrc&lt;/em&gt;):&lt;/p&gt;&lt;pre&gt;&lt;code class="plaintext"&gt;IMAPAccount vivaldi
+Host imap.vivaldi.net
+User hdogan@vivaldi.net
+PassCmd &amp;quot;pass mail/hdogan@vivaldi.net&amp;quot;
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore vivaldi-remote
+Account vivaldi
+
+MaildirStore vivaldi-local
+Subfolders Verbatim
+Path &amp;#126;/.mail/hdogan@vivaldi.net/
+Inbox &amp;#126;/.mail/hdogan@vivaldi.net/Inbox
+
+Channel vivaldi
+Master :vivaldi-remote:
+Slave :vivaldi-local:
+Patterns &amp;#42;
+Create Both
+SyncState &amp;#42;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;My configuration for sending email (&lt;em&gt;$HOME/.msmtprc&lt;/em&gt;):&lt;/p&gt;&lt;pre&gt;&lt;code class="plaintext"&gt;defaults
+port 587
+tls on
+tls&amp;#95;trust&amp;#95;file /etc/ssl/certs/ca-certificates.crt
+
+account vivaldi
+host smtp.vivaldi.net
+from hdogan@vivaldi.net
+auth on
+user hdogan@vivaldi.net
+passwordeval pass mail/hdogan@vivaldi.net
+
+account default : vivaldi
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I initialized &lt;code&gt;notmuch&lt;/code&gt; database with &lt;code&gt;notmuch new&lt;/code&gt; and answered the simple questions for initial configuration.&lt;/p&gt;&lt;p&gt;I needed to change &lt;code&gt;sendmail-program&lt;/code&gt; in &lt;code&gt;Doom Emacs&lt;/code&gt; config:&lt;pre&gt;&lt;code class="lisp"&gt;;; Email
+; use msmtp
+&amp;#40;setq message-send-mail-function 'message-send-mail-with-sendmail&amp;#41;
+&amp;#40;setq sendmail-program &amp;quot;/usr/bin/msmtp&amp;quot;&amp;#41;
+; tell msmtp to choose the SMTP server according to the from field in the outgoing email
+&amp;#40;setq message-sendmail-extra-arguments '&amp;#40;&amp;quot;--read-envelope-from&amp;quot;&amp;#41;&amp;#41;
+&amp;#40;setq message-sendmail-f-is-evil 't&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;</description><author>Haluk Dogan</author><pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate></item><item><guid>https://haluk.github.io/posts-output/2020-03-07-linux/</guid><link>https://haluk.github.io/posts-output/2020-03-07-linux/</link><title>DWM Config</title><description>&lt;p&gt;If you encounter misbehaving Java applications, add the following to your &lt;code&gt;$HOME/.xinitrc&lt;/code&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt;export &amp;#95;JAVA&amp;#95;AWT&amp;#95;WM&amp;#95;NONREPARENTING=1
 &lt;/code&gt;&lt;/pre&gt;</description><author>Haluk Dogan</author><pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate></item><item><guid>https://haluk.github.io/posts-output/2020-09-07-dwm/</guid><link>https://haluk.github.io/posts-output/2020-09-07-dwm/</link><title>Moving files to subdirectories</title><description>&lt;p&gt;If you have a directory with lots of files in it, this &lt;i&gt;POSIX compliant Bash&lt;/i&gt; script is here to help  you to move its files into subdirectories. &lt;pre&gt;&lt;code class="bash"&gt;#!/usr/bin/env bash
 
 echo &amp;quot;$&amp;#40;find . -type f | wc -l&amp;#41;&amp;quot; files

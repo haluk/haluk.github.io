@@ -12,8 +12,8 @@
         </script>
 
         <meta charset="utf-8"/>
-        <title>Haluk Dogan: Posts Tagged &quot;latex&quot;</title>
-        <link rel="canonical" href="https://haluk.github.io/tags-output/latex/">
+        <title>Haluk Dogan: isync + notmuch + emacs</title>
+        <link rel="canonical" href="https://haluk.github.io/posts-output/2020-09-11-emacs/">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/fantasque-sans-mono" type="text/css"/>
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/gruvbox-dark.min.css">
@@ -85,17 +85,86 @@
                 </aside>
             </dd>
             
-<div id="posts-by-tag">
-    <div id="page-header">
-        <h2>Posts Tagged &quot;latex&quot;</h2>
+<div id="post">
+    <div class="post-header">
+    <h2>isync + notmuch + emacs</h2>
+    <div id="post-meta" class="row">
+        <div class="col-lg-6">
+            September 11, 2020
+            
+            <span class="col-lg-6 right"> | By Haluk Dogan</span>
+            
+        </div>
     </div>
-    <ul>
+</div>
+<br/>
+<div>
     
-        <li>
-            <a href="/posts-output/2019-08-04-mathjax/">MathJax Test</a>
-        </li>
+    <p>This is my setup for emacs as email client. First, we need to install the required programs for password management (<em>pass</em>), mailbox synchronizer (<em>isync</em>), smtp client (<em>msmtp</em>), and mail indexer and tagger (<em>notmuch, afew</em>).</p><pre><code class="bash">sudo pacman -S pass isync msmtp notmuch afew
+</code></pre><p>My configuration for mailbox synchronizer (<em>$HOME/.mbsyncrc</em>):</p><pre><code class="plaintext">IMAPAccount vivaldi
+Host imap.vivaldi.net
+User hdogan@vivaldi.net
+PassCmd &quot;pass mail/hdogan@vivaldi.net&quot;
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore vivaldi-remote
+Account vivaldi
+
+MaildirStore vivaldi-local
+Subfolders Verbatim
+Path &#126;/.mail/hdogan@vivaldi.net/
+Inbox &#126;/.mail/hdogan@vivaldi.net/Inbox
+
+Channel vivaldi
+Master :vivaldi-remote:
+Slave :vivaldi-local:
+Patterns &#42;
+Create Both
+SyncState &#42;
+</code></pre><p>My configuration for sending email (<em>$HOME/.msmtprc</em>):</p><pre><code class="plaintext">defaults
+port 587
+tls on
+tls&#95;trust&#95;file /etc/ssl/certs/ca-certificates.crt
+
+account vivaldi
+host smtp.vivaldi.net
+from hdogan@vivaldi.net
+auth on
+user hdogan@vivaldi.net
+passwordeval pass mail/hdogan@vivaldi.net
+
+account default : vivaldi
+</code></pre><p>I initialized <code>notmuch</code> database with <code>notmuch new</code> and answered the simple questions for initial configuration.</p><p>I needed to change <code>sendmail-program</code> in <code>Doom Emacs</code> config:<pre><code class="lisp">;; Email
+; use msmtp
+&#40;setq message-send-mail-function 'message-send-mail-with-sendmail&#41;
+&#40;setq sendmail-program &quot;/usr/bin/msmtp&quot;&#41;
+; tell msmtp to choose the SMTP server according to the from field in the outgoing email
+&#40;setq message-sendmail-extra-arguments '&#40;&quot;--read-envelope-from&quot;&#41;&#41;
+&#40;setq message-sendmail-f-is-evil 't&#41;
+</code></pre></p>
+</div>
+<br/>
+
+<div id="post-tags">
+    <b>Tags: </b>
     
-    </ul>
+    <a href="/tags-output/emacs/">emacs</a>
+    
+</div>
+
+
+    <br/>
+    <div id="prev-next">
+        
+        
+        <a class="right" href="/posts-output/2020-03-07-linux/">DWM Config &raquo;</a>
+        
+    </div>
+
+    
+
+
 </div>
 
             <header class="myHeader">
