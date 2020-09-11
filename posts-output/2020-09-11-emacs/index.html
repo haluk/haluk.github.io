@@ -135,14 +135,14 @@ user hdogan@vivaldi.net
 passwordeval pass mail/hdogan@vivaldi.net
 
 account default : vivaldi
-</code></pre><p>I initialized <code>notmuch</code> database with <code>notmuch new</code> and answered the simple questions for initial configuration.</p><p>I needed to change <code>sendmail-program</code> in <code>Doom Emacs</code> config:<pre><code class="lisp">;; Email
+</code></pre><p>I initialized <code>notmuch</code> database with <code>notmuch new</code> and answered the simple questions for initial configuration.</p><p>I needed to change <code>sendmail-program</code> in <code>Doom Emacs</code> config (*$HOME/.doom.d/config.el):</p><pre><code class="lisp">;; Email
 ; use msmtp
 &#40;setq message-send-mail-function 'message-send-mail-with-sendmail&#41;
 &#40;setq sendmail-program &quot;/usr/bin/msmtp&quot;&#41;
 ; tell msmtp to choose the SMTP server according to the from field in the outgoing email
 &#40;setq message-sendmail-extra-arguments '&#40;&quot;--read-envelope-from&quot;&#41;&#41;
 &#40;setq message-sendmail-f-is-evil 't&#41;
-</code></pre></p>
+</code></pre>
 </div>
 <br/>
 
