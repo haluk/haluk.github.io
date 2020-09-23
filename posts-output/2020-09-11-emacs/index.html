@@ -135,7 +135,7 @@ user hdogan@vivaldi.net
 passwordeval pass mail/hdogan@vivaldi.net
 
 account default : vivaldi
-</code></pre><p>I initialized <code>notmuch</code> database with <code>notmuch new</code> and answered the simple questions for initial configuration.</p><p>I needed to change <code>sendmail-program</code> in <code>Doom Emacs</code> config (<em>$HOME/.doom.d/config.el</em>):</p><pre><code class="lisp">;; Email
+</code></pre><p>I initialized <code>notmuch</code> database with <code>notmuch setup</code> with tags <code>unread;inbox;new;sent;flagged;actionable</code>.</p><p>I needed to change <code>sendmail-program</code> in <code>Doom Emacs</code> config (<em>$HOME/.doom.d/config.el</em>):</p><pre><code class="lisp">;; Email
 ; use msmtp
 &#40;setq message-send-mail-function 'message-send-mail-with-sendmail&#41;
 &#40;setq sendmail-program &quot;/usr/bin/msmtp&quot;&#41;
