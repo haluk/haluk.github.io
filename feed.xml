@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="https://haluk.github.io/" rel="self" type="application/rss+xml"/><title>Haluk Dogan</title><link>https://haluk.github.io/</link><description>Personal Website</description><lastBuildDate>Wed, 23 Sep 2020 19:01:11 +0000</lastBuildDate><generator>clj-rss</generator><item><guid>https://haluk.github.io/posts-output/2020-09-11-emacs/</guid><link>https://haluk.github.io/posts-output/2020-09-11-emacs/</link><title>isync + notmuch + emacs</title><description>&lt;p&gt;This is my setup for emacs as email client. First, we need to install the required programs for password management (&lt;em&gt;pass&lt;/em&gt;), mailbox synchronizer (&lt;em&gt;isync&lt;/em&gt;), smtp client (&lt;em&gt;msmtp&lt;/em&gt;), and mail indexer and tagger (&lt;em&gt;notmuch, afew&lt;/em&gt;).&lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt;sudo pacman -S pass isync msmtp notmuch afew
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="https://haluk.github.io/" rel="self" type="application/rss+xml"/><title>Haluk Dogan</title><link>https://haluk.github.io/</link><description>Personal Website</description><lastBuildDate>Mon, 19 Oct 2020 19:08:05 +0000</lastBuildDate><generator>clj-rss</generator><item><guid>https://haluk.github.io/posts-output/2020-10-19-linux/</guid><link>https://haluk.github.io/posts-output/2020-10-19-linux/</link><title>Eduroam Wireless Configuration</title><description>&lt;p&gt;&lt;code&gt;NetworManager&lt;/code&gt; and its command-line tools should be installed.&lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt;$ nmcli con add type wifi ifname wlp1s0 con-name eduroam ssid eduroam
+$ nmcli con edit id eduroam
+nmcli&amp;gt; set ipv4.method auto
+nmcli&amp;gt; set 802-1x.eap peap
+nmcli&amp;gt; set 802-1x.phase2-auth mschapv2
+nmcli&amp;gt; set 802-1x.identity username@unl.edu
+nmcli&amp;gt; set 802-1x.password userpassword
+nmcli&amp;gt; set wifi-sec.key-mgmt wpa-eap
+nmcli&amp;gt; save
+nmcli&amp;gt; activate
+&lt;/code&gt;&lt;/pre&gt;</description><author>Haluk Dogan</author><pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate></item><item><guid>https://haluk.github.io/posts-output/2020-09-11-emacs/</guid><link>https://haluk.github.io/posts-output/2020-09-11-emacs/</link><title>isync + notmuch + emacs</title><description>&lt;p&gt;This is my setup for emacs as email client. First, we need to install the required programs for password management (&lt;em&gt;pass&lt;/em&gt;), mailbox synchronizer (&lt;em&gt;isync&lt;/em&gt;), smtp client (&lt;em&gt;msmtp&lt;/em&gt;), and mail indexer and tagger (&lt;em&gt;notmuch, afew&lt;/em&gt;).&lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt;sudo pacman -S pass isync msmtp notmuch afew
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;My configuration for mailbox synchronizer (&lt;em&gt;$HOME/.mbsyncrc&lt;/em&gt;):&lt;/p&gt;&lt;pre&gt;&lt;code class="plaintext"&gt;IMAPAccount vivaldi
 Host imap.vivaldi.net
 User hdogan@vivaldi.net

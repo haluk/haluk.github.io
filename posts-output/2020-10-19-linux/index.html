@@ -12,8 +12,8 @@
         </script>
 
         <meta charset="utf-8"/>
-        <title>Haluk Dogan: Posts Tagged &quot;math&quot;</title>
-        <link rel="canonical" href="https://haluk.github.io/tags-output/math/">
+        <title>Haluk Dogan: Eduroam Wireless Configuration</title>
+        <link rel="canonical" href="https://haluk.github.io/posts-output/2020-10-19-linux/">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/fantasque-sans-mono" type="text/css"/>
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/gruvbox-dark.min.css">
@@ -85,17 +85,54 @@
                 </aside>
             </dd>
             
-<div id="posts-by-tag">
-    <div id="page-header">
-        <h2>Posts Tagged &quot;math&quot;</h2>
+<div id="post">
+    <div class="post-header">
+    <h2>Eduroam Wireless Configuration</h2>
+    <div id="post-meta" class="row">
+        <div class="col-lg-6">
+            October 19, 2020
+            
+            <span class="col-lg-6 right"> | By Haluk Dogan</span>
+            
+        </div>
     </div>
-    <ul>
+</div>
+<br/>
+<div>
     
-        <li>
-            <a href="/posts-output/2019-08-04-mathjax/">MathJax Test</a>
-        </li>
+    <p><code>NetworManager</code> and its command-line tools should be installed.</p><pre><code class="bash">$ nmcli con add type wifi ifname wlp1s0 con-name eduroam ssid eduroam
+$ nmcli con edit id eduroam
+nmcli&gt; set ipv4.method auto
+nmcli&gt; set 802-1x.eap peap
+nmcli&gt; set 802-1x.phase2-auth mschapv2
+nmcli&gt; set 802-1x.identity username@unl.edu
+nmcli&gt; set 802-1x.password userpassword
+nmcli&gt; set wifi-sec.key-mgmt wpa-eap
+nmcli&gt; save
+nmcli&gt; activate
+</code></pre>
+</div>
+<br/>
+
+<div id="post-tags">
+    <b>Tags: </b>
     
-    </ul>
+    <a href="/tags-output/linux/">linux</a>
+    
+</div>
+
+
+    <br/>
+    <div id="prev-next">
+        
+        
+        <a class="right" href="/posts-output/2020-09-11-emacs/">isync + notmuch + emacs &raquo;</a>
+        
+    </div>
+
+    
+
+
 </div>
 
             <header class="myHeader">
