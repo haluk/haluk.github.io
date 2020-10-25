@@ -108,8 +108,9 @@
         </div>
     </div>
     <pre><code class="lisp">(defun get-only-matched (query)
-  "1. Goto the beginning of the current buffer; perform the search and store the matched strings
-</code></pre><ol><li><code class="lisp">Go back to the point of origin; create a new buffer; insert the matched strings into the new buffer   3. Switch to the new buffer; go to the beginning of the new buffer."
+  "Goto the beginning of the current buffer; perform the search and store the matched strings
+   Go back to the point of origin; create a new buffer; insert the matched strings into the new buffer
+   Switch to the new buffer; go to the beginning of the new buffer."
   (interactive "sQuery:")
   (let (matched-list)
     (save-excursion
@@ -125,7 +126,7 @@
        matched-list))
     (switch-to-buffer (get-buffer "*MATCHED*"))
     (goto-char (point-min))))
-</code></li></ol>
+</code></pre>
     <a href="/posts-output/2020-10-25-emacs/">Continue reading &#8594;</a>
     <hr>
     

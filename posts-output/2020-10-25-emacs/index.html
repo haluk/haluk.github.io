@@ -101,8 +101,9 @@
 <div>
     
     <pre><code class="lisp">&#40;defun get-only-matched &#40;query&#41;
-  &quot;1. Goto the beginning of the current buffer; perform the search and store the matched strings
-<ol><li>Go back to the point of origin; create a new buffer; insert the matched strings into the new buffer   3. Switch to the new buffer; go to the beginning of the new buffer.&quot;
+  &quot;Goto the beginning of the current buffer; perform the search and store the matched strings
+   Go back to the point of origin; create a new buffer; insert the matched strings into the new buffer
+   Switch to the new buffer; go to the beginning of the new buffer.&quot;
   &#40;interactive &quot;sQuery:&quot;&#41;
   &#40;let &#40;matched-list&#41;
     &#40;save-excursion
@@ -118,7 +119,7 @@
        matched-list&#41;&#41;
     &#40;switch-to-buffer &#40;get-buffer &quot;&#42;MATCHED&#42;&quot;&#41;&#41;
     &#40;goto-char &#40;point-min&#41;&#41;&#41;&#41;
-</code></pre></li></ol>
+</code></pre>
 </div>
 <br/>
 
