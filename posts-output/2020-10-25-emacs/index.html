@@ -12,8 +12,8 @@
         </script>
 
         <meta charset="utf-8"/>
-        <title>Haluk Dogan: Bash Functions</title>
-        <link rel="canonical" href="https://haluk.github.io/posts-output/2019-08-04-linux/">
+        <title>Haluk Dogan: Show Only Matched Strings in a New Buffer</title>
+        <link rel="canonical" href="https://haluk.github.io/posts-output/2020-10-25-emacs/">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/fantasque-sans-mono" type="text/css"/>
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/gruvbox-dark.min.css">
@@ -87,10 +87,10 @@
             
 <div id="post">
     <div class="post-header">
-    <h2>Bash Functions</h2>
+    <h2>Show Only Matched Strings in a New Buffer</h2>
     <div id="post-meta" class="row">
         <div class="col-lg-6">
-            September 30, 2019
+            October 25, 2020
             
             <span class="col-lg-6 right"> | By Haluk Dogan</span>
             
@@ -100,42 +100,32 @@
 <br/>
 <div>
     
-    <p>I heavily use two <i>bash</i> functions I defined. <i>listcols</i> is for listing columns along with its column index, and <i>prettycsv</i> is for displaying delimited files nicely formatted in the terminal.  </p><pre><code class="bash"> function listcols {
-    local arg sep
-    sep=&quot;,&quot;
-    while getopts 's:' arg
-    do
-        case ${arg} in
-            s&#41; sep=${OPTARG};;
-            &#42;&#41; return 1 # illegal option
-        esac
-    done
-    shift $&#40;&#40;OPTIND -1&#41;&#41;
-    awk -F$sep '{for &#40;i = 1; i &lt;= NF; i++&#41; print i&quot;:&quot;, $i; exit}' $@
-}
- </code></pre> <pre><code class="bash"> function prettycsv {
-    local arg sep
-    sep=&quot;,&quot;
-    while getopts 's:' arg
-    do
-        case ${arg} in
-            s&#41; sep=${OPTARG};;
-            &#42;&#41; return 1 # illegal option
-        esac
-    done
-    shift $&#40;&#40;OPTIND -1&#41;&#41;
-    column -t -s$sep -n &quot;$@&quot; | less -N -F -S -X -K
-}
- </code></pre>
+    <pre><code class="lisp">&#40;defun get-only-matched &#40;query&#41;
+  &quot;1. Goto the beginning of the current buffer; perform the search and store the matched strings
+<ol><li>Go back to the point of origin; create a new buffer; insert the matched strings into the new buffer   3. Switch to the new buffer; go to the beginning of the new buffer.&quot;
+  &#40;interactive &quot;sQuery:&quot;&#41;
+  &#40;let &#40;matched-list&#41;
+    &#40;save-excursion
+      &#40;goto-char &#40;point-min&#41;&#41;
+      &#40;while &#40;re-search-forward query nil t&#41;
+        &#40;push
+         &#40;buffer-substring-no-properties &#40;match-beginning 0&#41; &#40;match-end 0&#41;&#41;
+         matched-list&#41;&#41;&#41;
+    &#40;with-current-buffer &#40;get-buffer-create &quot;&#42;MATCHED&#42;&quot;&#41;
+      &#40;mapc
+       &#40;lambda &#40;matched&#41;
+         &#40;insert matched &quot;\n&quot;&#41;&#41;
+       matched-list&#41;&#41;
+    &#40;switch-to-buffer &#40;get-buffer &quot;&#42;MATCHED&#42;&quot;&#41;&#41;
+    &#40;goto-char &#40;point-min&#41;&#41;&#41;&#41;
+</code></pre></li></ol>
 </div>
 <br/>
 
 <div id="post-tags">
     <b>Tags: </b>
     
-    <a href="/tags-output/bash/">bash</a>
-    
-    <a href="/tags-output/linux/">linux</a>
+    <a href="/tags-output/emacs/">emacs</a>
     
 </div>
 
@@ -143,10 +133,8 @@
     <br/>
     <div id="prev-next">
         
-        <a href="/posts-output/2020-09-07-dwm/">&laquo; Moving files to subdirectories</a>
         
-        
-        <a class="right" href="/posts-output/2019-08-04-mathjax/">MathJax Test &raquo;</a>
+        <a class="right" href="/posts-output/2020-10-19-linux/">Eduroam Wireless Configuration &raquo;</a>
         
     </div>
 

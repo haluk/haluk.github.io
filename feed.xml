@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="https://haluk.github.io/" rel="self" type="application/rss+xml"/><title>Haluk Dogan</title><link>https://haluk.github.io/</link><description>Personal Website</description><lastBuildDate>Mon, 19 Oct 2020 19:08:05 +0000</lastBuildDate><generator>clj-rss</generator><item><guid>https://haluk.github.io/posts-output/2020-10-19-linux/</guid><link>https://haluk.github.io/posts-output/2020-10-19-linux/</link><title>Eduroam Wireless Configuration</title><description>&lt;p&gt;&lt;code&gt;NetworManager&lt;/code&gt; and its command-line tools should be installed.&lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt;$ nmcli con add type wifi ifname wlp1s0 con-name eduroam ssid eduroam
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="https://haluk.github.io/" rel="self" type="application/rss+xml"/><title>Haluk Dogan</title><link>https://haluk.github.io/</link><description>Personal Website</description><lastBuildDate>Sun, 25 Oct 2020 19:39:28 +0000</lastBuildDate><generator>clj-rss</generator><item><guid>https://haluk.github.io/posts-output/2020-10-25-emacs/</guid><link>https://haluk.github.io/posts-output/2020-10-25-emacs/</link><title>Show Only Matched Strings in a New Buffer</title><description>&lt;pre&gt;&lt;code class="lisp"&gt;&amp;#40;defun get-only-matched &amp;#40;query&amp;#41;
+  &amp;quot;1. Goto the beginning of the current buffer; perform the search and store the matched strings
+&lt;ol&gt;&lt;li&gt;Go back to the point of origin; create a new buffer; insert the matched strings into the new buffer   3. Switch to the new buffer; go to the beginning of the new buffer.&amp;quot;
+  &amp;#40;interactive &amp;quot;sQuery:&amp;quot;&amp;#41;
+  &amp;#40;let &amp;#40;matched-list&amp;#41;
+    &amp;#40;save-excursion
+      &amp;#40;goto-char &amp;#40;point-min&amp;#41;&amp;#41;
+      &amp;#40;while &amp;#40;re-search-forward query nil t&amp;#41;
+        &amp;#40;push
+         &amp;#40;buffer-substring-no-properties &amp;#40;match-beginning 0&amp;#41; &amp;#40;match-end 0&amp;#41;&amp;#41;
+         matched-list&amp;#41;&amp;#41;&amp;#41;
+    &amp;#40;with-current-buffer &amp;#40;get-buffer-create &amp;quot;&amp;#42;MATCHED&amp;#42;&amp;quot;&amp;#41;
+      &amp;#40;mapc
+       &amp;#40;lambda &amp;#40;matched&amp;#41;
+         &amp;#40;insert matched &amp;quot;\n&amp;quot;&amp;#41;&amp;#41;
+       matched-list&amp;#41;&amp;#41;
+    &amp;#40;switch-to-buffer &amp;#40;get-buffer &amp;quot;&amp;#42;MATCHED&amp;#42;&amp;quot;&amp;#41;&amp;#41;
+    &amp;#40;goto-char &amp;#40;point-min&amp;#41;&amp;#41;&amp;#41;&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;/ol&gt;</description><author>Haluk Dogan</author><pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate></item><item><guid>https://haluk.github.io/posts-output/2020-10-19-linux/</guid><link>https://haluk.github.io/posts-output/2020-10-19-linux/</link><title>Eduroam Wireless Configuration</title><description>&lt;p&gt;&lt;code&gt;NetworManager&lt;/code&gt; and its command-line tools should be installed.&lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt;$ nmcli con add type wifi ifname wlp1s0 con-name eduroam ssid eduroam
 $ nmcli con edit id eduroam
 nmcli&amp;gt; set ipv4.method auto
 nmcli&amp;gt; set 802-1x.eap peap
