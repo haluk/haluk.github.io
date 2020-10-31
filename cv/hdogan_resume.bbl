@@ -1,0 +1,879 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ydnt/global//global/global}
+    \entry{Dogan2020}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=2e8e2a653c9d0c547961592373305463}{%
+           family={Dogan},
+           familyi={D\bibinitperiod},
+           given={Haluk},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a73d4805325f4146bda6d53162cfa0d}{%
+           family={Shu},
+           familyi={S\bibinitperiod},
+           given={Jiang},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95791a6c45dbedf6244d8d7a6f71e654}{%
+           family={Zeynep},
+           familyi={Z\bibinitperiod},
+           given={Hakguder},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=05cfd0bcb3bc857f515fc6e69d6ca277}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Zheng},
+           giveni={Z\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=7482f85444a858d40436d1f2a5dd8012}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Juan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Biomed Central}%
+      }
+      \strng{namehash}{c2f721b17936459d1247ba8addb3b4e2}
+      \strng{fullhash}{c2f721b17936459d1247ba8addb3b4e2}
+      \strng{bibnamehash}{c2f721b17936459d1247ba8addb3b4e2}
+      \strng{authorbibnamehash}{c2f721b17936459d1247ba8addb3b4e2}
+      \strng{authornamehash}{c2f721b17936459d1247ba8addb3b4e2}
+      \strng{authorfullhash}{c2f721b17936459d1247ba8addb3b4e2}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BMC Genomics \textbf{(In press)}}
+      \field{month}{9}
+      \field{title}{Elucidation of Molecular Links Between Obesityand Cancer Through MicroRNA Regulation}
+      \field{year}{2020}
+      \true{nocite}
+    \endentry
+    \entry{Cui2019}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=7482f85444a858d40436d1f2a5dd8012}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Juan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a73d4805325f4146bda6d53162cfa0d}{%
+           family={Shu},
+           familyi={S\bibinitperiod},
+           given={Jiang},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f33b4e26a1b2a1f3288caaf6f6d6385d}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Tian},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e8e2a653c9d0c547961592373305463}{%
+           family={Dogan},
+           familyi={D\bibinitperiod},
+           given={Haluk},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for Cancer Research}%
+      }
+      \strng{namehash}{38fe8d9f19ff361f6b8f6b9f5bc8eb91}
+      \strng{fullhash}{38fe8d9f19ff361f6b8f6b9f5bc8eb91}
+      \strng{bibnamehash}{38fe8d9f19ff361f6b8f6b9f5bc8eb91}
+      \strng{authorbibnamehash}{38fe8d9f19ff361f6b8f6b9f5bc8eb91}
+      \strng{authornamehash}{38fe8d9f19ff361f6b8f6b9f5bc8eb91}
+      \strng{authorfullhash}{38fe8d9f19ff361f6b8f6b9f5bc8eb91}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Molecular and Cellular Biology / Genetics}
+      \field{month}{7}
+      \field{title}{Unraveling exosome-enabled cancer signaling: An integrated genomic approach}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1158/1538-7445.am2019-779
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1158/1538-7445.am2019-779
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1158/1538-7445.am2019-779
+      \endverb
+    \endentry
+    \entry{Dogan2019}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=2e8e2a653c9d0c547961592373305463}{%
+           family={Dogan},
+           familyi={D\bibinitperiod},
+           given={Haluk},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fe6cbcab1f6a433889b757f744c44374}{%
+           family={Hakguder},
+           familyi={H\bibinitperiod},
+           given={Zeynep},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=479447c576debb1d1e2fad19930f71db}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7482f85444a858d40436d1f2a5dd8012}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Juan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{afce5f10e7c2d7b40f934fe7deacc204}
+      \strng{fullhash}{afce5f10e7c2d7b40f934fe7deacc204}
+      \strng{bibnamehash}{afce5f10e7c2d7b40f934fe7deacc204}
+      \strng{authorbibnamehash}{afce5f10e7c2d7b40f934fe7deacc204}
+      \strng{authornamehash}{afce5f10e7c2d7b40f934fe7deacc204}
+      \strng{authorfullhash}{afce5f10e7c2d7b40f934fe7deacc204}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 {IEEE} International Conference on Bioinformatics and Biomedicine ({BIBM})}
+      \field{month}{11}
+      \field{title}{Elucidation of {MicroRNA}-Gene Regulation in Human Cancer with Integrative Network Models}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1109/bibm47256.2019.8983024
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/bibm47256.2019.8983024
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/bibm47256.2019.8983024
+      \endverb
+    \endentry
+    \entry{Li2019}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1ddf851cc30035c0499cf19b1787948c}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Huaqing},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e8e2a653c9d0c547961592373305463}{%
+           family={Dogan},
+           familyi={D\bibinitperiod},
+           given={Haluk},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7482f85444a858d40436d1f2a5dd8012}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Juan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{48ba1c21c6553a192bd12e1e1e047397}
+      \strng{fullhash}{48ba1c21c6553a192bd12e1e1e047397}
+      \strng{bibnamehash}{48ba1c21c6553a192bd12e1e1e047397}
+      \strng{authorbibnamehash}{48ba1c21c6553a192bd12e1e1e047397}
+      \strng{authornamehash}{48ba1c21c6553a192bd12e1e1e047397}
+      \strng{authorfullhash}{48ba1c21c6553a192bd12e1e1e047397}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 {IEEE} International Conference on Bioinformatics and Biomedicine ({BIBM})}
+      \field{month}{11}
+      \field{title}{A New Approach to Batch Effect Removal Based on Distribution Matching in Latent Space}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1109/bibm47256.2019.8983417
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/bibm47256.2019.8983417
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/bibm47256.2019.8983417
+      \endverb
+    \endentry
+    \entry{quint2019formal}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=4604da8b35c1bd0995673958c09f9780}{%
+           family={Quint},
+           familyi={Q\bibinitperiod},
+           given={Eleanor},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=be17c750657847fd489802d414210d61}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Dong},
+           giveni={D\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=2e8e2a653c9d0c547961592373305463}{%
+           family={Dogan},
+           familyi={D\bibinitperiod},
+           given={Haluk},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fe6cbcab1f6a433889b757f744c44374}{%
+           family={Hakguder},
+           familyi={H\bibinitperiod},
+           given={Zeynep},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=479447c576debb1d1e2fad19930f71db}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ef7c36b4048a121b29be74e3fbb1a856}{%
+           family={Dwyer},
+           familyi={D\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c81f6da129a76bb2f409c98ac6b61091}
+      \strng{fullhash}{c81f6da129a76bb2f409c98ac6b61091}
+      \strng{bibnamehash}{c81f6da129a76bb2f409c98ac6b61091}
+      \strng{authorbibnamehash}{c81f6da129a76bb2f409c98ac6b61091}
+      \strng{authornamehash}{c81f6da129a76bb2f409c98ac6b61091}
+      \strng{authorfullhash}{c81f6da129a76bb2f409c98ac6b61091}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1910.01074}
+      \field{title}{Formal language constraints for markov decision processes}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/1910.01074
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/1910.01074
+      \endverb
+    \endentry
+    \entry{xu2018constraining}{article}{}
+      \name{author}{6}{}{%
+        {{un=1,uniquepart=given,hash=be17c750657847fd489802d414210d61}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Dong},
+           giveni={D\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=4604da8b35c1bd0995673958c09f9780}{%
+           family={Quint},
+           familyi={Q\bibinitperiod},
+           given={Eleanor},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fe6cbcab1f6a433889b757f744c44374}{%
+           family={Hakguder},
+           familyi={H\bibinitperiod},
+           given={Zeynep},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e8e2a653c9d0c547961592373305463}{%
+           family={Dogan},
+           familyi={D\bibinitperiod},
+           given={Haluk},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=479447c576debb1d1e2fad19930f71db}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ef7c36b4048a121b29be74e3fbb1a856}{%
+           family={Dwyer},
+           familyi={D\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a8aa7a49ed5b00f69f6c08ce150b542f}
+      \strng{fullhash}{a8aa7a49ed5b00f69f6c08ce150b542f}
+      \strng{bibnamehash}{a8aa7a49ed5b00f69f6c08ce150b542f}
+      \strng{authorbibnamehash}{a8aa7a49ed5b00f69f6c08ce150b542f}
+      \strng{authornamehash}{a8aa7a49ed5b00f69f6c08ce150b542f}
+      \strng{authorfullhash}{a8aa7a49ed5b00f69f6c08ce150b542f}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Constraining Action Sequences with Formal Languages for Deep Reinforcement Learning}
+      \field{year}{2018}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://openreview.net/pdf?id=ByezgnA5tm
+      \endverb
+      \verb{url}
+      \verb https://openreview.net/pdf?id=ByezgnA5tm
+      \endverb
+    \endentry
+    \entry{Tomov2016}{article}{}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=67475e2b5405333250ff977963ef8184}{%
+           family={Tomov},
+           familyi={T\bibinitperiod},
+           given={Martin\bibnamedelima L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0370fbabec7ada55c76d1cd1c529d974}{%
+           family={Olmsted},
+           familyi={O\bibinitperiod},
+           given={Zachary\bibnamedelima T.},
+           giveni={Z\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e8e2a653c9d0c547961592373305463}{%
+           family={Dogan},
+           familyi={D\bibinitperiod},
+           given={Haluk},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a605fa0bcab0b316ed812eda6998960a}{%
+           family={Gongorurler},
+           familyi={G\bibinitperiod},
+           given={Eda},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8dfb497cd663b5ca6ed38730d310b4df}{%
+           family={Tsompana},
+           familyi={T\bibinitperiod},
+           given={Maria},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db3256668c4df3140914f28bff1c22eb}{%
+           family={Otu},
+           familyi={O\bibinitperiod},
+           given={Hasan\bibnamedelima H.},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=34c6fce72e130941b2c9e12275e5a10e}{%
+           family={Buck},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=206dd63bea197a3714e342ab4c4ca3aa}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Eun-Ah},
+           giveni={E\bibinithyphendelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=640672dc3a95a7b37a5ae56af0a65910}{%
+           family={Cibelli},
+           familyi={C\bibinitperiod},
+           given={Jose},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0bfc7e22c5154ddbf14ae574320bf26}{%
+           family={Paluh},
+           familyi={P\bibinitperiod},
+           given={Janet\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media {LLC}}%
+      }
+      \strng{namehash}{f423d8db3929c578c1859fec710b46ca}
+      \strng{fullhash}{f423d8db3929c578c1859fec710b46ca}
+      \strng{bibnamehash}{f423d8db3929c578c1859fec710b46ca}
+      \strng{authorbibnamehash}{f423d8db3929c578c1859fec710b46ca}
+      \strng{authornamehash}{f423d8db3929c578c1859fec710b46ca}
+      \strng{authorfullhash}{f423d8db3929c578c1859fec710b46ca}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scientific Reports}
+      \field{month}{12}
+      \field{number}{1}
+      \field{title}{Distinct and Shared Determinants of Cardiomyocyte Contractility in Multi-Lineage Competent Ethnically Diverse Human {iPSCs}}
+      \field{volume}{6}
+      \field{year}{2016}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1038/srep37637
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/srep37637
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/srep37637
+      \endverb
+    \endentry
+    \entry{Wang2016}{article}{}
+      \name{author}{23}{}{%
+        {{un=0,uniquepart=base,hash=ee2b4a15025ecfaafcb95983b2d2623d}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Feng},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0adef09c0222cadb121307dde1a9793}{%
+           family={Kaplan},
+           familyi={K\bibinitperiod},
+           given={Jess\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=70ce5fc2cc5fdf45ca11bdd74f6220fa}{%
+           family={Gold},
+           familyi={G\bibinitperiod},
+           given={Benjamin\bibnamedelima D.},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3f4473b880a9e1ec0e79b28a6a2fe2c5}{%
+           family={Bhasin},
+           familyi={B\bibinitperiod},
+           given={Manoj\bibnamedelima K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e69f7bc7d7cefa22030b970318b772c4}{%
+           family={Ward},
+           familyi={W\bibinitperiod},
+           given={Naomi\bibnamedelima L.},
+           giveni={N\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d0e1da1521d813dc94f856ccd2b4c8d8}{%
+           family={Kellermayer},
+           familyi={K\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=550a8bae048f605307b4ce69b6edea4e}{%
+           family={Kirschner},
+           familyi={K\bibinitperiod},
+           given={Barbara\bibnamedelima S.},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=367eda519eac17950d86c67a9e86d3c7}{%
+           family={Heyman},
+           familyi={H\bibinitperiod},
+           given={Melvin\bibnamedelima B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43aa846679131e37c4d9d1a2f3b6fe2e}{%
+           family={Dowd},
+           familyi={D\bibinitperiod},
+           given={Scot\bibnamedelima E.},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a017579ead50842a53cb0a17d5f0d780}{%
+           family={Cox},
+           familyi={C\bibinitperiod},
+           given={Stephen\bibnamedelima B.},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e8e2a653c9d0c547961592373305463}{%
+           family={Dogan},
+           familyi={D\bibinitperiod},
+           given={Haluk},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=400dbe7a873b948af348f6b82247ffa1}{%
+           family={Steven},
+           familyi={S\bibinitperiod},
+           given={Blaire},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8996733cdd8e939186a1e739807119a}{%
+           family={Ferry},
+           familyi={F\bibinitperiod},
+           given={George\bibnamedelima D.},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=20f5e17c575ae1ad5e7bd38eedf62667}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Stanley\bibnamedelima A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50bc3ae2a787502d23d5ce24b7dff911}{%
+           family={Baldassano},
+           familyi={B\bibinitperiod},
+           given={Robert\bibnamedelima N.},
+           giveni={R\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1222c77b232123e2afeae2e85e715a0d}{%
+           family={Moran},
+           familyi={M\bibinitperiod},
+           given={Christopher\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd505370f6d657ef3b5811aeb6d9da45}{%
+           family={Garnett},
+           familyi={G\bibinitperiod},
+           given={Elizabeth\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c3c25a852cbdc8857e68874e827cc4c}{%
+           family={Drake},
+           familyi={D\bibinitperiod},
+           given={Lauren},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db3256668c4df3140914f28bff1c22eb}{%
+           family={Otu},
+           familyi={O\bibinitperiod},
+           given={Hasan\bibnamedelima H.},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3d7fe04d09f08b82f608fd67ad034a3d}{%
+           family={Mirny},
+           familyi={M\bibinitperiod},
+           given={Leonid\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d8987f89525ec203fdc5750f6b6552f1}{%
+           family={Libermann},
+           familyi={L\bibinitperiod},
+           given={Towia\bibnamedelima A.},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=55ff4a482dc5149b7d6f60a5bc78962e}{%
+           family={Winter},
+           familyi={W\bibinitperiod},
+           given={Harland\bibnamedelima S.},
+           giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=779df1577551859f94a33a9c182f2948}{%
+           family={Korolev},
+           familyi={K\bibinitperiod},
+           given={Kirill\bibnamedelima S.},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier {BV}}%
+      }
+      \strng{namehash}{4fad24a73fd343b446f9bae8b7b79d4a}
+      \strng{fullhash}{ec86aaee89d5827b9130fb57ded8d684}
+      \strng{bibnamehash}{4fad24a73fd343b446f9bae8b7b79d4a}
+      \strng{authorbibnamehash}{4fad24a73fd343b446f9bae8b7b79d4a}
+      \strng{authornamehash}{4fad24a73fd343b446f9bae8b7b79d4a}
+      \strng{authorfullhash}{ec86aaee89d5827b9130fb57ded8d684}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cell Reports}
+      \field{month}{2}
+      \field{number}{4}
+      \field{title}{Detecting Microbial Dysbiosis Associated with Pediatric Crohn Disease Despite the High Variability of the Gut Microbiota}
+      \field{volume}{14}
+      \field{year}{2016}
+      \true{nocite}
+      \field{pages}{945\bibrangedash 955}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1016/j.celrep.2015.12.088
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.celrep.2015.12.088
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.celrep.2015.12.088
+      \endverb
+    \endentry
+    \entry{Dogan2014}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2e8e2a653c9d0c547961592373305463}{%
+           family={Dogan},
+           familyi={D\bibinitperiod},
+           given={Haluk},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc3f2ca9716f2293a521a567ecc0d2b4}{%
+           family={Can},
+           familyi={C\bibinitperiod},
+           given={Handan},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db3256668c4df3140914f28bff1c22eb}{%
+           family={Otu},
+           familyi={O\bibinitperiod},
+           given={Hasan\bibnamedelima H.},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science ({PLoS})}%
+      }
+      \strng{namehash}{50f7446d45649fdb4aa78f20c311dc2e}
+      \strng{fullhash}{50f7446d45649fdb4aa78f20c311dc2e}
+      \strng{bibnamehash}{50f7446d45649fdb4aa78f20c311dc2e}
+      \strng{authorbibnamehash}{50f7446d45649fdb4aa78f20c311dc2e}
+      \strng{authornamehash}{50f7446d45649fdb4aa78f20c311dc2e}
+      \strng{authorfullhash}{50f7446d45649fdb4aa78f20c311dc2e}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{PLoS} {ONE}}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Whole Genome Sequence of a Turkish Individual}
+      \field{volume}{9}
+      \field{year}{2014}
+      \true{nocite}
+      \field{pages}{e85233}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0085233
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1371/journal.pone.0085233
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1371/journal.pone.0085233
+      \endverb
+    \endentry
+    \entry{Nalbantoglu2014}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=d01602fbe23eb12d76833946886a7b37}{%
+           family={Nalbantoglu},
+           familyi={N\bibinitperiod},
+           given={Ufuk},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ecb223b563f117ca70dd4f92e6aee873}{%
+           family={Cakar},
+           familyi={C\bibinitperiod},
+           given={Atilla},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e8e2a653c9d0c547961592373305463}{%
+           family={Dogan},
+           familyi={D\bibinitperiod},
+           given={Haluk},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ddd029c78bed5a2581b351617111edab}{%
+           family={Abaci},
+           familyi={A\bibinitperiod},
+           given={Neslihan},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae5ca1ef164054d8205c3f6058b4152f}{%
+           family={Ustek},
+           familyi={U\bibinitperiod},
+           given={Duran},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=25fd47ea0812b2786dcee253a3560bb9}{%
+           family={Sayood},
+           familyi={S\bibinitperiod},
+           given={Khalid},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc3f2ca9716f2293a521a567ecc0d2b4}{%
+           family={Can},
+           familyi={C\bibinitperiod},
+           given={Handan},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier {BV}}%
+      }
+      \strng{namehash}{e46f97da1f822b72e092d54949a77b81}
+      \strng{fullhash}{e46f97da1f822b72e092d54949a77b81}
+      \strng{bibnamehash}{e46f97da1f822b72e092d54949a77b81}
+      \strng{authorbibnamehash}{e46f97da1f822b72e092d54949a77b81}
+      \strng{authornamehash}{e46f97da1f822b72e092d54949a77b81}
+      \strng{authorfullhash}{e46f97da1f822b72e092d54949a77b81}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Food Microbiology}
+      \field{month}{8}
+      \field{title}{Metagenomic analysis of the microbial community in kefir grains}
+      \field{volume}{41}
+      \field{year}{2014}
+      \true{nocite}
+      \field{pages}{42\bibrangedash 51}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.fm.2014.01.014
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.fm.2014.01.014
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.fm.2014.01.014
+      \endverb
+    \endentry
+    \entry{Dogan2013}{incollection}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2e8e2a653c9d0c547961592373305463}{%
+           family={Dogan},
+           familyi={D\bibinitperiod},
+           given={Haluk},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db3256668c4df3140914f28bff1c22eb}{%
+           family={Otu},
+           familyi={O\bibinitperiod},
+           given={Hasan\bibnamedelima H.},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Humana Press}%
+      }
+      \strng{namehash}{0b7fbafe60285fef81849817e16ac944}
+      \strng{fullhash}{0b7fbafe60285fef81849817e16ac944}
+      \strng{bibnamehash}{0b7fbafe60285fef81849817e16ac944}
+      \strng{authorbibnamehash}{0b7fbafe60285fef81849817e16ac944}
+      \strng{authornamehash}{0b7fbafe60285fef81849817e16ac944}
+      \strng{authorfullhash}{0b7fbafe60285fef81849817e16ac944}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Methods in Molecular Biology}
+      \field{month}{8}
+      \field{title}{Objective Functions}
+      \field{year}{2013}
+      \true{nocite}
+      \field{pages}{45\bibrangedash 58}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1007/978-1-62703-646-7_3
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-1-62703-646-7_3
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-1-62703-646-7_3
+      \endverb
+    \endentry
+    \entry{Isci2013}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=c4989da4a7f779cf43cce9c28aaf0c91}{%
+           family={Isci},
+           familyi={I\bibinitperiod},
+           given={Senol},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e8e2a653c9d0c547961592373305463}{%
+           family={Dogan},
+           familyi={D\bibinitperiod},
+           given={Haluk},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a53ee98f3eb62b833a3e40c4a86cf1e7}{%
+           family={Ozturk},
+           familyi={O\bibinitperiod},
+           given={Cengizhan},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db3256668c4df3140914f28bff1c22eb}{%
+           family={Otu},
+           familyi={O\bibinitperiod},
+           given={Hasan\bibnamedelima H.},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press ({OUP})}%
+      }
+      \strng{namehash}{8b0ad0df730b1cc7d9dd2d7ed0fe2526}
+      \strng{fullhash}{8b0ad0df730b1cc7d9dd2d7ed0fe2526}
+      \strng{bibnamehash}{8b0ad0df730b1cc7d9dd2d7ed0fe2526}
+      \strng{authorbibnamehash}{8b0ad0df730b1cc7d9dd2d7ed0fe2526}
+      \strng{authornamehash}{8b0ad0df730b1cc7d9dd2d7ed0fe2526}
+      \strng{authorfullhash}{8b0ad0df730b1cc7d9dd2d7ed0fe2526}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioinformatics}
+      \field{month}{11}
+      \field{number}{6}
+      \field{title}{Bayesian network prior: network analysis of biological data using external knowledge}
+      \field{volume}{30}
+      \field{year}{2013}
+      \true{nocite}
+      \field{pages}{860\bibrangedash 867}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1093/bioinformatics/btt643
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/bioinformatics/btt643
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/bioinformatics/btt643
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
