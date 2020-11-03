@@ -6,3 +6,4 @@ build:
 
 clean:
 	latexmk -c
+	rm -rf .auctex-auto
