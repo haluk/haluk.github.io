@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="https://haluk.github.io/" rel="self" type="application/rss+xml"/><title>Haluk Dogan</title><link>https://haluk.github.io/</link><description>Personal Website</description><lastBuildDate>Mon, 11 Jan 2021 16:23:31 +0000</lastBuildDate><generator>clj-rss</generator><item><guid>https://haluk.github.io/posts-output/2020-10-25-emacs/</guid><link>https://haluk.github.io/posts-output/2020-10-25-emacs/</link><title>Show Only Matched Strings in a New Buffer</title><description>&lt;pre&gt;&lt;code class="lisp"&gt;&amp;#40;defun get-only-matched &amp;#40;query&amp;#41;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="https://haluk.github.io/" rel="self" type="application/rss+xml"/><title>Haluk Dogan</title><link>https://haluk.github.io/</link><description>Personal Website</description><lastBuildDate>Thu, 25 Feb 2021 05:41:03 +0000</lastBuildDate><generator>clj-rss</generator><item><guid>https://haluk.github.io/posts-output/2021-02-24-gccemacs/</guid><link>https://haluk.github.io/posts-output/2021-02-24-gccemacs/</link><title>Compiling GccEmacs</title><description>&lt;p&gt;I compile gccemacs from source.&lt;code&gt;libgccjit&lt;/code&gt; is required.&lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt;yay -S libgccjit
+git clone git://git.savannah.gnu.org/emacs.git -b feature/native-comp
+
+export LD=&amp;quot;/usr/bin/ld.gold&amp;quot;
+export CFLAGS=&amp;quot;-g -flto -fuse-ld=gold&amp;quot;
+export CXXFLAGS=&amp;quot;-g -flto -fuse-ld=gold&amp;quot;
+
+./autogen.sh
+
+./configure \
+--with-dbus \
+--with-lcms2 \
+--with-gif \
+--with-jpeg \
+--with-png \
+--with-rsvg \
+--with-xpm \
+--with-tiff \
+--with-xwidgets \
+--with-x-toolkit=gtk3 \
+--with-xft \
+--without-xaw3d \
+--with-cairo \
+--with-xml2 \
+--with-libotf \
+--with-mailutils \
+--with-json \
+--with-gnutls \
+--without-gconf \
+--without-gsettings \
+--with-sound=alsa \
+--with-modules \
+--with-nativecomp \
+--enable-link-time-optimization \
+--enable-profiling \
+--prefix=$HOME/.local/
+
+make -j$&amp;#40;nproc&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;</description><author>Haluk Dogan</author><pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate></item><item><guid>https://haluk.github.io/posts-output/2020-10-25-emacs/</guid><link>https://haluk.github.io/posts-output/2020-10-25-emacs/</link><title>Show Only Matched Strings in a New Buffer</title><description>&lt;pre&gt;&lt;code class="lisp"&gt;&amp;#40;defun get-only-matched &amp;#40;query&amp;#41;
   &amp;quot;Goto the beginning of the current buffer; perform the search and store the matched strings
    Go back to the point of origin; create a new buffer; insert the matched strings into the new buffer
    Switch to the new buffer; go to the beginning of the new buffer.&amp;quot;

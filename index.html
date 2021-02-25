@@ -53,11 +53,11 @@
                             <h3>Recent Posts</h3>
                             <ul>
                                 
+                                <li><a href="/posts-output/2021-02-24-gccemacs/">Compiling Gc...</a></li>
+                                
                                 <li><a href="/posts-output/2020-10-25-emacs/">Show Only Ma...</a></li>
                                 
                                 <li><a href="/posts-output/2020-10-19-linux/">Eduroam Wire...</a></li>
-                                
-                                <li><a href="/posts-output/2020-09-11-emacs/">isync + notm...</a></li>
                                 
                             </ul>
                         </div>
@@ -96,6 +96,58 @@
     </ul>
 </section>
 <div id="post">
+    
+    <div class="post-header">
+        <h2>Compiling GccEmacs</h2>
+        <div id="post-meta">
+            February 24, 2021
+            
+            | By Haluk Dogan
+            
+            </div>
+        </div>
+    </div>
+    <p>I compile gccemacs from source.<code>libgccjit</code> is required.</p><pre><code class="bash">yay -S libgccjit
+git clone git://git.savannah.gnu.org/emacs.git -b feature/native-comp
+
+export LD="/usr/bin/ld.gold"
+export CFLAGS="-g -flto -fuse-ld=gold"
+export CXXFLAGS="-g -flto -fuse-ld=gold"
+
+./autogen.sh
+
+./configure \
+--with-dbus \
+--with-lcms2 \
+--with-gif \
+--with-jpeg \
+--with-png \
+--with-rsvg \
+--with-xpm \
+--with-tiff \
+--with-xwidgets \
+--with-x-toolkit=gtk3 \
+--with-xft \
+--without-xaw3d \
+--with-cairo \
+--with-xml2 \
+--with-libotf \
+--with-mailutils \
+--with-json \
+--with-gnutls \
+--without-gconf \
+--without-gsettings \
+--with-sound=alsa \
+--with-modules \
+--with-nativecomp \
+--enable-link-time-optimization \
+--enable-profiling \
+--prefix=$HOME/.local/
+
+make -j$(nproc)
+</code></pre>
+    <a href="/posts-output/2021-02-24-gccemacs/">Continue reading &#8594;</a>
+    <hr>
     
     <div class="post-header">
         <h2>Show Only Matched Strings in a New Buffer</h2>
@@ -182,40 +234,6 @@ nmcli&gt; activate
     <p>If you encounter misbehaving Java applications, add the following to your <code>$HOME/.xinitrc</code></p><pre><code class="bash">export _JAVA_AWT_WM_NONREPARENTING=1
 </code></pre>
     <a href="/posts-output/2020-03-07-linux/">Continue reading &#8594;</a>
-    <hr>
-    
-    <div class="post-header">
-        <h2>Moving files to subdirectories</h2>
-        <div id="post-meta">
-            March 7, 2020
-            
-            | By Haluk Dogan
-            
-            </div>
-        </div>
-    </div>
-    <p>If you have a directory with lots of files in it, this <i>POSIX compliant Bash</i> script is here to help  you to move its files into subdirectories. </p><pre><code class="bash">#!/usr/bin/env bash
-
-echo "$(find . -type f | wc -l)" files
-
-printf "How many subdirectories: "
-read -r F
-printf "Subdirectories prefix: "
-read -r S
-
-PARENT=${PWD}
-n=0
-for i in *
-do
-  if [ $((n+=1)) -gt "$F" ]; then
-    n=1
-  fi
-  todir=$PARENT/"$S"_$n
-  [ -d "$todir" ] || mkdir "$todir" 
-  mv "$i" "$todir" 
-done
-</code></pre>
-    <a href="/posts-output/2020-09-07-dwm/">Continue reading &#8594;</a>
     <hr>
     
 

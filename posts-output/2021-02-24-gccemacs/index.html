@@ -12,8 +12,8 @@
         </script>
 
         <meta charset="utf-8"/>
-        <title>Haluk Dogan: isync + notmuch + emacs</title>
-        <link rel="canonical" href="https://haluk.github.io/posts-output/2020-09-11-emacs/">
+        <title>Haluk Dogan: Compiling GccEmacs</title>
+        <link rel="canonical" href="https://haluk.github.io/posts-output/2021-02-24-gccemacs/">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/fantasque-sans-mono" type="text/css"/>
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/gruvbox-dark.min.css">
@@ -87,10 +87,10 @@
             
 <div id="post">
     <div class="post-header">
-    <h2>isync + notmuch + emacs</h2>
+    <h2>Compiling GccEmacs</h2>
     <div id="post-meta" class="row">
         <div class="col-lg-6">
-            September 11, 2020
+            February 24, 2021
             
             <span class="col-lg-6 right"> | By Haluk Dogan</span>
             
@@ -100,48 +100,44 @@
 <br/>
 <div>
     
-    <p>This is my setup for emacs as email client. First, we need to install the required programs for password management (<em>pass</em>), mailbox synchronizer (<em>isync</em>), smtp client (<em>msmtp</em>), and mail indexer and tagger (<em>notmuch, afew</em>).</p><pre><code class="bash">sudo pacman -S pass isync msmtp notmuch afew
-</code></pre><p>My configuration for mailbox synchronizer (<em>$HOME/.mbsyncrc</em>):</p><pre><code class="plaintext">IMAPAccount vivaldi
-Host imap.vivaldi.net
-User hdogan@vivaldi.net
-PassCmd &quot;pass mail/hdogan@vivaldi.net&quot;
-SSLType IMAPS
-CertificateFile /etc/ssl/certs/ca-certificates.crt
+    <p>I compile gccemacs from source.<code>libgccjit</code> is required.</p><pre><code class="bash">yay -S libgccjit
+git clone git://git.savannah.gnu.org/emacs.git -b feature/native-comp
 
-IMAPStore vivaldi-remote
-Account vivaldi
+export LD=&quot;/usr/bin/ld.gold&quot;
+export CFLAGS=&quot;-g -flto -fuse-ld=gold&quot;
+export CXXFLAGS=&quot;-g -flto -fuse-ld=gold&quot;
 
-MaildirStore vivaldi-local
-Subfolders Verbatim
-Path &#126;/.mail/hdogan@vivaldi.net/
-Inbox &#126;/.mail/hdogan@vivaldi.net/Inbox
+./autogen.sh
 
-Channel vivaldi
-Master :vivaldi-remote:
-Slave :vivaldi-local:
-Patterns &#42;
-Create Both
-SyncState &#42;
-</code></pre><p>My configuration for sending email (<em>$HOME/.msmtprc</em>):</p><pre><code class="plaintext">defaults
-port 587
-tls on
-tls&#95;trust&#95;file /etc/ssl/certs/ca-certificates.crt
+./configure \
+--with-dbus \
+--with-lcms2 \
+--with-gif \
+--with-jpeg \
+--with-png \
+--with-rsvg \
+--with-xpm \
+--with-tiff \
+--with-xwidgets \
+--with-x-toolkit=gtk3 \
+--with-xft \
+--without-xaw3d \
+--with-cairo \
+--with-xml2 \
+--with-libotf \
+--with-mailutils \
+--with-json \
+--with-gnutls \
+--without-gconf \
+--without-gsettings \
+--with-sound=alsa \
+--with-modules \
+--with-nativecomp \
+--enable-link-time-optimization \
+--enable-profiling \
+--prefix=$HOME/.local/
 
-account vivaldi
-host smtp.vivaldi.net
-from hdogan@vivaldi.net
-auth on
-user hdogan@vivaldi.net
-passwordeval pass mail/hdogan@vivaldi.net
-
-account default : vivaldi
-</code></pre><p>I initialized <code>notmuch</code> database with <code>notmuch setup</code> with tags <code>unread;inbox;new;sent;flagged;actionable</code>.</p><p>I needed to change <code>sendmail-program</code> in <code>Doom Emacs</code> config (<em>$HOME/.doom.d/config.el</em>):</p><pre><code class="lisp">;; Email
-; use msmtp
-&#40;setq message-send-mail-function 'message-send-mail-with-sendmail&#41;
-&#40;setq sendmail-program &quot;/usr/bin/msmtp&quot;&#41;
-; tell msmtp to choose the SMTP server according to the from field in the outgoing email
-&#40;setq message-sendmail-extra-arguments '&#40;&quot;--read-envelope-from&quot;&#41;&#41;
-&#40;setq message-sendmail-f-is-evil 't&#41;
+make -j$&#40;nproc&#41;
 </code></pre>
 </div>
 <br/>
@@ -157,10 +153,8 @@ account default : vivaldi
     <br/>
     <div id="prev-next">
         
-        <a href="/posts-output/2020-10-19-linux/">&laquo; Eduroam Wireless Configuration</a>
         
-        
-        <a class="right" href="/posts-output/2020-03-07-linux/">DWM Config &raquo;</a>
+        <a class="right" href="/posts-output/2020-10-25-emacs/">Show Only Matched Strings in a New Buffer &raquo;</a>
         
     </div>
 
