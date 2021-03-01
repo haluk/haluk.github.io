@@ -139,9 +139,8 @@ export CXXFLAGS="-g -flto -fuse-ld=gold"
 --without-gsettings \
 --with-sound=alsa \
 --with-modules \
---with-nativecomp \
+--with-native-compilation \
 --enable-link-time-optimization \
---enable-profiling \
 --prefix=$HOME/.local/
 
 make -j$(nproc)

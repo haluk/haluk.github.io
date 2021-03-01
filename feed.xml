@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="https://haluk.github.io/" rel="self" type="application/rss+xml"/><title>Haluk Dogan</title><link>https://haluk.github.io/</link><description>Personal Website</description><lastBuildDate>Thu, 25 Feb 2021 05:41:03 +0000</lastBuildDate><generator>clj-rss</generator><item><guid>https://haluk.github.io/posts-output/2021-02-24-gccemacs/</guid><link>https://haluk.github.io/posts-output/2021-02-24-gccemacs/</link><title>Compiling GccEmacs</title><description>&lt;p&gt;I compile gccemacs from source.&lt;code&gt;libgccjit&lt;/code&gt; is required.&lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt;yay -S libgccjit
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="https://haluk.github.io/" rel="self" type="application/rss+xml"/><title>Haluk Dogan</title><link>https://haluk.github.io/</link><description>Personal Website</description><lastBuildDate>Mon, 01 Mar 2021 10:12:31 +0000</lastBuildDate><generator>clj-rss</generator><item><guid>https://haluk.github.io/posts-output/2021-02-24-gccemacs/</guid><link>https://haluk.github.io/posts-output/2021-02-24-gccemacs/</link><title>Compiling GccEmacs</title><description>&lt;p&gt;I compile gccemacs from source.&lt;code&gt;libgccjit&lt;/code&gt; is required.&lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt;yay -S libgccjit
 git clone git://git.savannah.gnu.org/emacs.git -b feature/native-comp
 
 export LD=&amp;quot;/usr/bin/ld.gold&amp;quot;
@@ -30,9 +30,8 @@ export CXXFLAGS=&amp;quot;-g -flto -fuse-ld=gold&amp;quot;
 --without-gsettings \
 --with-sound=alsa \
 --with-modules \
---with-nativecomp \
+--with-native-compilation \
 --enable-link-time-optimization \
---enable-profiling \
 --prefix=$HOME/.local/
 
 make -j$&amp;#40;nproc&amp;#41;
