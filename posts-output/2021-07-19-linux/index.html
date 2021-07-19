@@ -12,8 +12,8 @@
         </script>
 
         <meta charset="utf-8"/>
-        <title>Haluk Dogan: Posts Tagged &quot;latex&quot;</title>
-        <link rel="canonical" href="https://haluk.github.io/tags-output/latex/">
+        <title>Haluk Dogan: Linux Font Rendering</title>
+        <link rel="canonical" href="https://haluk.github.io/posts-output/2021-07-19-linux/">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/fantasque-sans-mono" type="text/css"/>
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/gruvbox-dark.min.css">
@@ -87,17 +87,55 @@
                 </aside>
             </dd>
             
-<div id="posts-by-tag">
-    <div id="page-header">
-        <h2>Posts Tagged &quot;latex&quot;</h2>
+<div id="post">
+    <div class="post-header">
+    <h2>Linux Font Rendering</h2>
+    <div id="post-meta" class="row">
+        <div class="col-lg-6">
+            February 24, 2021
+            
+            <span class="col-lg-6 right"> | By Haluk Dogan</span>
+            
+        </div>
     </div>
-    <ul>
+</div>
+<br/>
+<div>
     
-        <li>
-            <a href="/posts-output/2019-08-04-mathjax/">MathJax Test</a>
-        </li>
+    <p><a href='https://novelist.xyz/tech/improve-font-rendering-arch-linux-no-infinality/'>This</a> is a great post for better font rendering in Linux.</p><pre><code class="bash"># edit /etc/profile.d/freetype2.sh
+export FREETYPE&#95;PROPERTIES=&quot;truetype:interpreter-version=38&quot;
+
+cd /etc/fonts/conf.d
+ln -s /usr/share/fontconfig/conf.default/10-hinting-slight.conf .
+ln -s /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf .
+ln -s /usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf .
+ </code></pre>
+</div>
+<br/>
+
+<div id="post-tags">
+    <b>Tags: </b>
     
-    </ul>
+    <a href="/tags-output/linux/">linux</a>
+    
+    <a href="/tags-output/font/">font</a>
+    
+</div>
+
+
+    <br/>
+    <div id="prev-next">
+        
+        <a href="/posts-output/2021-02-24-gccemacs/">&laquo; Compiling GccEmacs</a>
+        
+        
+        <a class="right" href="/posts-output/2020-10-25-emacs/">Show Only Matched Strings in a New Buffer &raquo;</a>
+        
+    </div>
+
+    
+
+
 </div>
 
             <header class="myHeader">
