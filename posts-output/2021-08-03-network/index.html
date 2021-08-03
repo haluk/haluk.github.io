@@ -12,8 +12,8 @@
         </script>
 
         <meta charset="utf-8"/>
-        <title>Haluk Dogan: Bash Functions</title>
-        <link rel="canonical" href="https://haluk.github.io/posts-output/2019-08-04-linux/">
+        <title>Haluk Dogan: Changing MTU size for VPN</title>
+        <link rel="canonical" href="https://haluk.github.io/posts-output/2021-08-03-network/">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/fantasque-sans-mono" type="text/css"/>
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/gruvbox-dark.min.css">
@@ -91,10 +91,10 @@
             
 <div id="post">
     <div class="post-header">
-    <h2>Bash Functions</h2>
+    <h2>Changing MTU size for VPN</h2>
     <div id="post-meta" class="row">
         <div class="col-lg-6">
-            September 30, 2019
+            August 3, 2021
             
             <span class="col-lg-6 right"> | By Haluk Dogan</span>
             
@@ -104,42 +104,26 @@
 <br/>
 <div>
     
-    <p>I heavily use two <i>bash</i> functions I defined. <i>listcols</i> is for listing columns along with its column index, and <i>prettycsv</i> is for displaying delimited files nicely formatted in the terminal.  </p><pre><code class="bash"> function listcols {
-    local arg sep
-    sep=&quot;,&quot;
-    while getopts 's:' arg
-    do
-        case ${arg} in
-            s&#41; sep=${OPTARG};;
-            &#42;&#41; return 1 # illegal option
-        esac
-    done
-    shift $&#40;&#40;OPTIND -1&#41;&#41;
-    awk -F$sep '{for &#40;i = 1; i &lt;= NF; i++&#41; print i&quot;:&quot;, $i; exit}' $@
-}
- </code></pre> <pre><code class="bash"> function prettycsv {
-    local arg sep
-    sep=&quot;,&quot;
-    while getopts 's:' arg
-    do
-        case ${arg} in
-            s&#41; sep=${OPTARG};;
-            &#42;&#41; return 1 # illegal option
-        esac
-    done
-    shift $&#40;&#40;OPTIND -1&#41;&#41;
-    column -t -s$sep -n &quot;$@&quot; | less -N -F -S -X -K
-}
- </code></pre>
+    <p>I can't open some websites when I am connected to VPN. Default MTU size was 1500 when interface was up. In order to find the right MTU value, I tried following command:</p><pre><code class="bash">ping -c 3 -M do -s 1300 stackoverflow.com
+</code></pre><p>1300 worked for me. I modified the MTU size to 1300+28=1328.</p><pre><code class="bash">emacs -nw /etc/NetworkManager/dispatcher.d/01-ifupdown
+
+#!/bin/sh
+
+#info : pre-up and pre-down are not implemented in network-manager
+
+if &#91; &quot;$2&quot; = &quot;vpn-up&quot; &#93;; then
+    /sbin/ifconfig &quot;$1&quot; mtu 1328
+fi
+ </code></pre><p>To check if it's updated, you can run <code>ifconfig</code> and then verify MTU size.</p><p>I still needed to change network settings in Firefox. To make that change, follow Firefox -> Settings -> Network Settings -> Auto-detect proxy settings for this network.</p>
 </div>
 <br/>
 
 <div id="post-tags">
     <b>Tags: </b>
     
-    <a href="/tags-output/bash/">bash</a>
-    
     <a href="/tags-output/linux/">linux</a>
+    
+    <a href="/tags-output/network/">network</a>
     
 </div>
 
@@ -147,10 +131,8 @@
     <br/>
     <div id="prev-next">
         
-        <a href="/posts-output/2020-09-07-dwm/">&laquo; Moving files to subdirectories</a>
         
-        
-        <a class="right" href="/posts-output/2019-08-04-mathjax/">MathJax Test &raquo;</a>
+        <a class="right" href="/posts-output/2021-07-19-linux/">Linux Font Rendering &raquo;</a>
         
     </div>
 

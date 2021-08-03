@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="https://haluk.github.io/" rel="self" type="application/rss+xml"/><title>Haluk Dogan</title><link>https://haluk.github.io/</link><description>Personal Website</description><lastBuildDate>Mon, 19 Jul 2021 23:12:09 +0000</lastBuildDate><generator>clj-rss</generator><item><guid>https://haluk.github.io/posts-output/2021-07-19-linux/</guid><link>https://haluk.github.io/posts-output/2021-07-19-linux/</link><title>Linux Font Rendering</title><description>&lt;p&gt;&lt;a href='https://novelist.xyz/tech/improve-font-rendering-arch-linux-no-infinality/'&gt;This&lt;/a&gt; is a great post for better font rendering in Linux.&lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt;# edit /etc/profile.d/freetype2.sh
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="https://haluk.github.io/" rel="self" type="application/rss+xml"/><title>Haluk Dogan</title><link>https://haluk.github.io/</link><description>Personal Website</description><lastBuildDate>Tue, 03 Aug 2021 14:09:47 +0000</lastBuildDate><generator>clj-rss</generator><item><guid>https://haluk.github.io/posts-output/2021-08-03-network/</guid><link>https://haluk.github.io/posts-output/2021-08-03-network/</link><title>Changing MTU size for VPN</title><description>&lt;p&gt;I can't open some websites when I am connected to VPN. Default MTU size was 1500 when interface was up. In order to find the right MTU value, I tried following command:&lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt;ping -c 3 -M do -s 1300 stackoverflow.com
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;1300 worked for me. I modified the MTU size to 1300+28=1328.&lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt;emacs -nw /etc/NetworkManager/dispatcher.d/01-ifupdown
+
+#!/bin/sh
+
+#info : pre-up and pre-down are not implemented in network-manager
+
+if &amp;#91; &amp;quot;$2&amp;quot; = &amp;quot;vpn-up&amp;quot; &amp;#93;; then
+    /sbin/ifconfig &amp;quot;$1&amp;quot; mtu 1328
+fi
+ &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To check if it's updated, you can run &lt;code&gt;ifconfig&lt;/code&gt; and then verify MTU size.&lt;/p&gt;&lt;p&gt;I still needed to change network settings in Firefox. To make that change, follow Firefox -&gt; Settings -&gt; Network Settings -&gt; Auto-detect proxy settings for this network.&lt;/p&gt;</description><author>Haluk Dogan</author><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate></item><item><guid>https://haluk.github.io/posts-output/2021-07-19-linux/</guid><link>https://haluk.github.io/posts-output/2021-07-19-linux/</link><title>Linux Font Rendering</title><description>&lt;p&gt;&lt;a href='https://novelist.xyz/tech/improve-font-rendering-arch-linux-no-infinality/'&gt;This&lt;/a&gt; is a great post for better font rendering in Linux.&lt;/p&gt;&lt;pre&gt;&lt;code class="bash"&gt;# edit /etc/profile.d/freetype2.sh
 export FREETYPE&amp;#95;PROPERTIES=&amp;quot;truetype:interpreter-version=38&amp;quot;
 
 cd /etc/fonts/conf.d
