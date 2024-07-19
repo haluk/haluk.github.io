@@ -1,0 +1,46 @@
+* {
+    font-family: 'FantasqueSansMonoRegular';
+}
+
+.myHeader {
+    font-weight: bold;
+}
+
+.myHeader > h1 {
+    font-size: 36px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.myHeader > h1.blue {
+    color: #5272AF;
+}
+.myHeader > h1.teal {
+    color: #29838D;
+}
+.myHeader > h1.teal > a.header {
+    color: inherit;
+    text-decoration: none;
+}
+.myHeader > h5.comment {
+    color:   #979a9a;
+    font-size: 16px;
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 0px;
+}
+.myHeader > p {
+    font-size: 18px;
+    margin-left: 25px;
+}
+.myHeader > p > a:link, a:visited, a:hover {
+    color: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.myHeader > p > a.active {
+    color: none;
+    text-decoration: underline;
+    display: inline-block;
+}
