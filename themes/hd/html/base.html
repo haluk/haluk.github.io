@@ -80,7 +80,8 @@
                 <h1 class="blue">)</h1>
             </header>
             <dd>
-                <footer>Copyright &copy; {{today|date:yyyy}} {{author}}</footer>
+                <!-- <footer>Copyright &copy; {{today|date:yyyy}} {{author}}</footer> -->
+                <footer>Copyright &copy; <script type="text/javascript">document.write( new Date().getFullYear() );</script> {{author}}</footer>
                 <footer>Powered by <a href="http://cryogenweb.org">Cryogen</a></footer>
             </dd>
         </dl>
